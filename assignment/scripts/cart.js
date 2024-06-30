@@ -54,15 +54,12 @@ console.log(`Should be empty: `, basket);
 function removeItem(item){
     if (basket.indexOf(item) >= 0){
        let removedItem = basket.splice(basket.indexOf(item), 1)
-       //this line of code is kind of gross to look at, I know.
-       //I just wanted it to be as concise as possible
-       //Also, the reason it's not just returning the basket.splice
-       //is because the test expected a string, not array
         return removedItem[0]
     }
     else if (basket.indexOf(item) < 0)
         return null
     else
+        console.log(`It broke ヽ(｀⌒´メ)ノ`);
         return `It broke ヽ(｀⌒´メ)ノ`
 }// end remove item
 
